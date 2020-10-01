@@ -1,3 +1,15 @@
 // Place all the styles related to the Roasters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  a {
+    color: var(--gold);
+    text-decoration: none;
+    &:hover {
+      border-bottom: solid 1px var(--gold);
+    }
+  }
+}

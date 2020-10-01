@@ -8,4 +8,15 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %header
+      %nav
+        .logo
+          = image_tag('https://via.placeholder.com/150')
+        .nav-links
+          %ul
+            %li= link_to 'About', '#'
+            %li= link_to 'Search', '#'
+            %li= link_to 'Contact', '#'
+    %main
+      = yield
+    %footer

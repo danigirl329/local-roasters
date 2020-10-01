@@ -1,3 +1,74 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// olive-green: #4F5637
+// gold: #CAAB66
+
+:root {
+  --olive-green: #4F5637;
+  --dark-olive-green: #323723;
+  --gold: #CAAB66;
+  --reenie: 'Reenie Beanie', cursive;
+  --opensans: 'Open Sans', sans-serif;
+}
+
+html {
+  background-color: var(--olive-green);
+  color: var(--gold);
+  font-family: var(--opensans);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--reenie);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+nav {
+  background-color: var(--dark-olive-green);
+  display: flex;
+  img {
+    flex: 50%;
+  }
+  .nav-links {
+    font-family: var(--reenie);
+    font-size: 2em;
+    max-width: 1200px;
+    margin-bottom: 0 auto 2em auto;
+    padding: 1em;
+    ul {
+      display: flex;
+      li {
+        margin: 0.5em;
+        flex: 3;
+        a {
+          align-self: flex-end;
+          color: var(--gold);
+          text-decoration: none;
+          margin: 1em;
+          &:hover {
+            border-bottom: solid 1px var(--gold);
+          }
+        }
+      }
+    }
+  }
+}
