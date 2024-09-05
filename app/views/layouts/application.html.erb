@@ -13,6 +13,9 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application.tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -20,16 +23,27 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><%=link_to 'About', root_path %></li>
-        <li><%=link_to 'Contact', root_path %></li>
-        <li><%=link_to 'Roasters', roasters_path %></li>
-      </ul>
+    <!-- Navbar component -->
+    <!-- component -->
+    <nav class="flex justify-between px-20 py-10 items-center bg-white">
+      <h1 class="text-xl font-patrick text-gray-800 font-bold">LocalRoasters</h1>
+      <div class="flex items-center">
+        <%# <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pt-0.5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input class="ml-2 outline-none bg-transparent font-" type="text" name="search" id="search" placeholder="Search..." />
+        </div> %>
+        <ul class="flex items-center space-x-6">
+          <li class="font-semibold text-gray-700"><%= link_to "Home", "/"%></li>
+          <li class="font-semibold text-gray-700"><%= link_to "About", "/"%></li>
+          <li class="font-semibold text-gray-700"><%= link_to "All Roasters", roasters_path %></li>
+        </ul>
+      </div>
     </nav>
     <main>
       <div class="px-9 py-9"><%= yield %></div>
     </main>
-    
   </body>
+  <footer class="mt-9 p-9 bg-primary-700 text-white">Footer</footer>
 </html>

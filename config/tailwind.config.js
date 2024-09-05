@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "patrick": ["Patrick Hand SC", "cursive"]
+      }, 
       fontSize: {
         'xs': ['0.75rem', '1rem'], // 12px
         'sm': ['0.875rem', '1.25rem'], // 14px
@@ -51,9 +54,19 @@ module.exports = {
         'widest': '0.1em',
       },
       colors: {
-        primary: '#1A202C', // Example primary color
-        secondary: '#718096', // Example secondary color
-        accent: '#F56565', // Example accent color
+        'primary': {
+          50: '#F8F1F1',
+          100: '#EBD4D4',
+          200: '#ddb7b7',
+          300: '#cf9a9a',
+          400: '#c27d7d',
+          500: '#b4615f',
+          600: '#924545',
+          700: '#823d3d',
+          800: '#642f2f',
+          900: '#472121',
+          950: '#2a1414',
+        },
       },
     },
   },

@@ -2,9 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary-50: #F8F1F1;
+  --color-primary-100: #EBD4D4;
+  --color-primary-200: #ddb7b7;
+  --color-primary-300: #cf9a9a;
+  --color-primary-400: #c27d7d;
+  --color-primary-500: #b4615f;
+  --color-primary-600: #924545;
+  --color-primary-700: #823d3d;
+  --color-primary-800: #642f2f;
+  --color-primary-900: #472121;
+  --color-primary-950: #2a1414;
+}
+
 @layer base {
+  
+  @font-face {
+    font-family: "patrick";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Roboto.woff2) format('woff2');
+  }
+
   html {
     font-family: "Proxima Nova", system-ui, sans-serif;
+    background-color: var(--color-primary-100);
   }
 }
 
+@layer components {
+  .btn {
+    background-color: var( --color-primary-900 );
+    color: var(--color-primary-100);
+    border-radius: 5px;
+    padding: 10px 20px;
+    &:hover {
+      background-color: var(--color-primary-950);
+     }
+    a {
+      color: var(--color-primary-100);
+    }
+  }
+}
